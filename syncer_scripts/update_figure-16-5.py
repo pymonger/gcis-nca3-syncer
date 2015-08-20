@@ -128,7 +128,8 @@ def update(url):
         update_url = check_url
     data = {
         'identifier': act_id,
-        'data_usage': "K1 = 666.09 K2 = 1282.71 ; CONVERSION ; To radiance L_lam = G_resc * b6 + B_resc ; To brightness temperature T6 = K2 / alog ( (K1 / L_lam) + 1 )   where b6 is the original band-6 data.",
+        'methodology':"The image used has ID LT50130322003182LGS01 and is available from the US Geological Survey (http://earthexplorer.usgs.gov/order/process?node=EC&dataset_name=LANDSAT_TM&ordered=LT50130322003182LGS01).\n\n Detailed metadata about the image can be found at http://earthexplorer.usgs.gov/metadata/3119/LT50130322003182LGS01/.\n\n The granule used was L5013032_03220030701_B60.TIF which is a LandSat 5, band 6 granule from July 1, 2003. The image was processed using IDL and the temperature values were converted from the thermal band data using a calibration equation.\n\n IDL code used to generate the figure is:\n\n K1 = 666.09 K2 = 1282.71 ; CONVERSION ; To radiance L_lam = G_resc * b6 + B_resc ; To brightness temperature T6 = K2 / alog ( (K1 / L_lam) + 1 ) where b6 is the original band-6 data.\n\nHere, G_resc and B_resc are gain and bias, respectively to be applied to the thermal band sensor counts (b6) to convert them into radiance. L-lam is the derived radiance.\n\nDetails of algorithms can be found in http://www.yale.edu/ceo/Documentation/Landsat_DN_to_Kelvin.pdf",
+        #'data_usage': "K1 = 666.09 K2 = 1282.71 ; CONVERSION ; To radiance L_lam = G_resc * b6 + B_resc ; To brightness temperature T6 = K2 / alog ( (K1 / L_lam) + 1 )   where b6 is the original band-6 data.",
         'output_artifacts': "/image/f27374a2-d4ef-479c-8f96-9de23fedfc3e",
         'software': "IDL",
     }
